@@ -1,6 +1,6 @@
 # splx
 
-面接予約自動化ツール for Windows
+とある会社s**pl*x面接予約自動化ツール for Windows
 
 ## Prerequisites
 - selenium
