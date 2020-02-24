@@ -16,9 +16,9 @@ def main():
             datetime.timedelta(seconds=32400)))
         tomorrow = now + datetime.timedelta(days=1)
         if now.hour < 9:
-            return datetime.datetime(*now.timetuple()[:3], 9)
+            return datetime.datetime(*now.timetuple()[:3], 8, 58)
         else:
-            return datetime.datetime(*tomorrow.timetuple[:3], 9)
+            return datetime.datetime(*tomorrow.timetuple[:3], 8, 58)
 
     def winalert():
         duration = 30000
@@ -89,7 +89,7 @@ def main():
             return False, count
 
     release_time = get_release_time()
-    while datetime.datetime.now() > release_time:
+    while datetime.datetime.now() < release_time:
         print(datetime.datetime.now())
         time.sleep(30)
     else:
